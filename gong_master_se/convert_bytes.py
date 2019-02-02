@@ -1,6 +1,6 @@
 import re,logging
 from decimal import *
-logging.basicConfig(level=logging.WARNING)# .INFO.WARNING.ERROR
+logging.basicConfig(level=logging.WARNING)# .INFO.WARNING.ERROR.DEBUG
 
 units=['B','K','M','G','T','P','E','Z','Y']
 decimalx,binaryx=(1000,1024)
@@ -82,7 +82,7 @@ def bytes2human(numis,humann=0.9,base=binaryx):
     >>> bytes2human(' 1048576 b')
     (1.0, 'M')
     >>> bytes2human(' 938700 b')
-    (916.7, 'K')	
+    (916.7, 'K')
     >>> bytes2human(' 957700 b')
     (0.91, 'M')
     >>> bytes2human('0000001007')
@@ -94,7 +94,7 @@ def bytes2human(numis,humann=0.9,base=binaryx):
     >>> bytes2human('999899999b',humann=1)
     (953.58, 'M')
     >>> bytes2human(' 938700 b',humann=1)
-    (916.7, 'K')	
+    (916.7, 'K')
     >>> bytes2human(' 957700 b',humann=1)
     (935.25, 'K')
     >>> bytes2human('0000001007',humann=1)
@@ -104,7 +104,7 @@ def bytes2human(numis,humann=0.9,base=binaryx):
     >>> bytes2human('999899999b',humann=1,base=decimalx)
     (999.9, 'M')
     >>> bytes2human(' 938700 b',humann=1,base=decimalx)
-    (938.7, 'K')	
+    (938.7, 'K')
     >>> bytes2human(' 957700 b',humann=1,base=decimalx)
     (957.7, 'K')
     >>> bytes2human('0000001007',humann=1,base=decimalx)
@@ -125,6 +125,8 @@ def bytes2human(numis,humann=0.9,base=binaryx):
 
 
 if __name__=='__main__':
+    import doctest
+    doctest.testmod()
     print(human2bytes('917.15Mb'))# (961701478, 'B')
     print(bytes2human('961706570 b'))# (917.15, 'M')
     print(human2bytes('35 Yb',base=decimalx))# (35000000000000000000000000, 'B')
