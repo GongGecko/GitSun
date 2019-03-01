@@ -1546,48 +1546,154 @@ console.log('................................S035...............................
 
 #### 第02条(filter)
 
-@import "廖雪峰JavaScriptjpg"
+@import "廖雪峰JavaScript教程022.jpg"
 
 ```JavaScript
 
+console.log('................................S036................................');
+// Array的filter()把传入的函数依次作用于每个元素,然后根据返回值是true还是false决定保留还是丢弃该元素。
+
+// 过滤偶数
+var arr = [1, 2, 4, 5, 6, 9, 10, 15];
+var r = arr.filter(function (x) {
+    return x % 2 !== 0;
+});
+r; // [1, 5, 9, 15]
+console.log('................................S036................................');
+
+// 过滤空字符串
+var arr = ['A', '', 'B', null, undefined, 'C', '  '];
+var r = arr.filter(function (s) {
+    return s && s.trim(); // 注意：IE9以下的版本没有trim()方法
+});
+r; // ['A', 'B', 'C']
+console.log('................................S036................................');
 
 
+console.log('................................S037................................');
+var arr = ['A', 'B', 'C'];
+var r = arr.filter(function (element, index, self) { // 回调函数
+    console.log(element); // 依次打印'A', 'B', 'C'
+    console.log(index); // 依次打印0, 1, 2
+    console.log(self); // self就是变量arr
+    return true;
+});
+console.log('................................S037................................');
+
+// 去除Array的重复元素
+'use strict';
+
+var
+    r,
+    arr = ['apple', 'strawberry', 'banana', 'pear', 'apple', 'orange', 'orange', 'strawberry'];
+r = arr.filter(function (element, index, self) {
+    return self.indexOf(element) === index; // indexOf总是返回第一个元素的位置
+});
+console.log(r.toString()); // apple,strawberry,banana,pear,orange
+console.log('................................S037................................');
 
 
+console.log('................................S038................................');
+// 用filter()筛选出素数
+'use strict';
+
+function get_primes(arr) {
+    return arr.filter(function (x) {
+        if (typeof x !== 'number') {
+            return false;
+        }
+        if (x === 0 || x === 1) {
+            return false;
+        }
+        for (let i = 2; i < x; i++) {
+            if (x % i === 0) {
+                return false;
+            }
+        }
+        return true;
+    });
+}
+
+// 测试:
+var
+    x,
+    r,
+    arr = [];
+for (x = 1; x < 100; x++) {
+    arr.push(x);
+}
+r = get_primes(arr);
+if (r.toString() === [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97].toString()) {
+    console.log('测试通过!');
+} else {
+    console.log('测试失败: ' + r.toString());
+}
+console.log('................................S038................................');
+
+```
+
+#### 第03条(sort)
+
+@import "廖雪峰JavaScript教程023.jpg"
+
+```JavaScript
+
+// Array的sort()方法用于排序;通常规定,对于两个元素x和y,如果x < y,返回-1,x == y,返回0,x > y,返回1
+
+['Google', 'Apple', 'Microsoft'].sort(); // ['Apple', 'Google', 'Microsoft']
+['Google', 'apple', 'Microsoft'].sort(); // ['Google', 'Microsoft", 'apple']
+[10, 20, 1, 2].sort(); // [1, 10, 2, 20]
+// sort()方法默认把所有元素先转换为String再排序
+
+console.log('................................S039................................');
+'use strict';
+
+var arr = [10, 20, 1, 2];
+arr.sort(function (x, y) {
+    if (x < y) {
+        return -1;
+    }
+    if (x > y) {
+        return 1;
+    }
+    return 0;
+});
+console.log(arr); // [1, 2, 10, 20]
+console.log('................................S039................................');
+
+// 忽略大小写排序
+var arr = ['Google', 'apple', 'Microsoft'];
+arr.sort(function (s1, s2) {
+    x1 = s1.toUpperCase();
+    x2 = s2.toUpperCase();
+    if (x1 < x2) {
+        return -1;
+    }
+    if (x1 > x2) {
+        return 1;
+    }
+    return 0;
+}); // ['apple', 'Google', 'Microsoft']
+console.log('................................S039................................');
 
 
+// sort()方法会直接对Array进行修改,它返回的结果仍是当前Array
 
+var a1 = ['B', 'A', 'C'];
+var a2 = a1.sort();
+var a3 = ['A', 'B', 'C'];
+console.log(a1); // ['A', 'B', 'C']
+console.log(a2); // ['A', 'B', 'C']
+console.log(a1 === a2); // true,a1和a2是同一对象
+console.log(a3 === a2); // false
 
+```
 
+### 第05节(闭包)
 
+@import "廖雪峰JavaScript教g"
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+```JavaScript
 
 
 
