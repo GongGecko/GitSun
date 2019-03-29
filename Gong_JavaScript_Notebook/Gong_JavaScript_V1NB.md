@@ -1,4 +1,4 @@
-# JavaScript学习笔记(Gong_JavaScript_Notebook)。
+# JavaScript学习笔记(Gong_JavaScript_V1NB)。
 
 [TOC]
 
