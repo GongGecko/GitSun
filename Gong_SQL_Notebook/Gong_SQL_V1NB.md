@@ -1,12 +1,12 @@
-# SQL学习笔记(Gong_SQL_Notebook)。
+# SQL学习笔记(Gong_SQL_V1NB)。
 
 [TOC]
 
-## 第01章(SQL简介)
+## 第S01章(SQL简介)
 
 @import "廖雪峰SQL教程01.jpg"
 
-### 第1节(关系数据库概述)
+### 第01节(关系数据库概述)
 
 @import "廖雪峰SQL教程03.jpg"
 
@@ -16,7 +16,7 @@ SQL:结构化查询语言Structured Query Language
 
 @import "廖雪峰SQL教程02.png"
 
-................................8ww................................
+print('............................S010101............................')
 定义列数据类型:
 
 INT                  整型                 4字节整数类型
@@ -30,7 +30,7 @@ BOOLEAN              布尔类型             存储True或者False
 DATE                 日期类型             存储日期
 TIME                 时间类型             存储时间
 DATETIME             日期和时间类型       存储日期+时间
-................................8ww................................
+print('............................S010101............................')
 
 
 各个数据库各自扩展通常称为“方言”。
@@ -44,7 +44,7 @@ DQL：Data Query Language
 
 ```
 
-### 第2节(安装MySQL)
+### 第02节(安装MySQL)
 
 @import "廖雪峰SQL教程04.jpg"
 
@@ -56,7 +56,7 @@ Linux上安装MySQL,apt-get install mysql-server
 
 ```
 
-## 第02章(关系模型)
+## 第S02章(关系模型)
 
 @import "廖雪峰SQL教程05.jpg"
 
@@ -70,7 +70,7 @@ Linux上安装MySQL,apt-get install mysql-server
 
 ```
 
-### 第1节(主键)
+### 第01节(主键)
 
 @import "廖雪峰SQL教程06.jpg"
 
@@ -91,7 +91,7 @@ Linux上安装MySQL,apt-get install mysql-server
 
 ```
 
-### 第2节(外键)
+### 第02节(外键)
 
 @import "廖雪峰SQL教程07.jpg"
 
@@ -128,7 +128,7 @@ DROP FOREIGN KEY fk_class_id;
 
 ```
 
-### 第3节(索引)
+### 第03节(索引)
 
 @import "廖雪峰SQL教程08.jpg"
 
@@ -160,15 +160,15 @@ ADD CONSTRAINT uni_name UNIQUE (name);
 
 ```
 
-## 第03章(在线SQL)
+## 第S03章(在线SQL)
 
 @import "廖雪峰SQL教程09.jpg"
 
-## 第04章(查询数据)
+## 第S04章(查询数据)
 
 @import "廖雪峰SQL教程10.jpg"
 
-### 第1节(基本查询)
+### 第01节(基本查询)
 
 @import "廖雪峰SQL教程11.jpg"
 
@@ -187,7 +187,7 @@ SELECT 1;
 
 ```
 
-### 第2节(条件查询)
+### 第02节(条件查询)
 
 @import "廖雪峰SQL教程12.jpg"
 
@@ -212,7 +212,7 @@ SELECT * FROM students WHERE name LIKE 'ab%'
 
 ```
 
-### 第3节(投影查询)
+### 第03节(投影查询)
 
 @import "廖雪峰SQL教程13.jpg"
 
@@ -227,7 +227,7 @@ SELECT id, score points, name FROM students;
 
 ```
 
-### 第4节(排序)
+### 第04节(排序)
 
 @import "廖雪峰SQL教程14.jpg"
 
@@ -258,7 +258,7 @@ ORDER BY score DESC;
 
 ```
 
-### 第5节(分页查询)
+### 第05节(分页查询)
 
 @import "廖雪峰SQL教程15.jpg"
 
@@ -288,7 +288,7 @@ LIMIT 3 OFFSET 20;
 
 ```
 
-### 第6节(聚合查询)
+### 第06节(聚合查询)
 
 @import "廖雪峰SQL教程16.jpg"
 
@@ -338,7 +338,7 @@ class_id	gender	num
 
 ```
 
-### 第7节(多表查询)
+### 第07节(多表查询)
 
 @import "廖雪峰SQL教程17.jpg"
 
@@ -376,7 +376,7 @@ WHERE s.gender = 'M' AND c.id = 1;
 
 ```
 
-### 第8节(连接查询)
+### 第08节(连接查询)
 
 @import "廖雪峰SQL教程18.jpg"
 
@@ -400,11 +400,11 @@ FULL OUTER JOIN
 
 ```
 
-## 第05章(修改数据)
+## 第S05章(修改数据)
 
 **增查改删,CRUD:增加(Create)、读取查询(Retrieve)、更新(Update)、删除(Delete)**
 
-### 第1节(INSERT)
+### 第01节(INSERT)
 
 @import "廖雪峰SQL教程19.jpg"
 
@@ -423,7 +423,7 @@ INSERT INTO students (class_id, name, gender, score) VALUES
 
 ```
 
-### 第2节(UPDATE)
+### 第02节(UPDATE)
 
 @import "廖雪峰SQL教程20.jpg"
 
@@ -450,7 +450,7 @@ UPDATE students SET score=60;
 
 ```
 
-### 第3节(DELETE)
+### 第03节(DELETE)
 
 @import "廖雪峰SQL教程21.jpg"
 
@@ -470,7 +470,7 @@ WHERE条件没有匹配,DELETE语句不会报错,也不会有记录被删除;
 
 ```
 
-## 第06章(MySQL)
+## 第S06章(MySQL)
 
 @import "廖雪峰SQL教程22.jpg"
 
@@ -494,7 +494,7 @@ mysql -h 10.0.1.99 -u root -p
 
 ```
 
-### 第1节(管理MySQL)
+### 第01节(管理MySQL)
 
 @import "廖雪峰SQL教程23.jpg"
 
@@ -535,7 +535,7 @@ Bye
 
 ```
 
-### 第2节(实用SQL语句)
+### 第02节(实用SQL语句)
 
 @import "廖雪峰SQL教程24.jpg"
 
@@ -572,7 +572,7 @@ INSERT INTO statistics (class_id, average) SELECT class_id, AVG(score) FROM stud
 
 ```
 
-## 第07章(事务)
+## 第S07章(事务)
 
 @import "廖雪峰SQL教程25.jpg"
 
@@ -607,7 +607,7 @@ Isolation Level/Read Uncommitted/Read Committed/Repeatable Read/Serializable
 
 ```
 
-### 第1节(Read Uncommitted)
+### 第01节(Read Uncommitted)
 
 @import "廖雪峰SQL教程26.jpg"
 
@@ -620,7 +620,7 @@ SET TRANSACTION ISOLATION LEVEL READ UNCOMMITTED;
 
 ```
 
-### 第2节(Read Committed)
+### 第02节(Read Committed)
 
 @import "廖雪峰SQL教程27.jpg"
 
@@ -632,7 +632,7 @@ SET TRANSACTION ISOLATION LEVEL READ COMMITTED;
 
 ```
 
-### 第3节(Repeatable Read)
+### 第03节(Repeatable Read)
 
 @import "廖雪峰SQL教程28.jpg"
 
@@ -644,7 +644,7 @@ SET TRANSACTION ISOLATION LEVEL REPEATABLE READ;
 
 ```
 
-### 第4节(Serializable)
+### 第04节(Serializable)
 
 @import "廖雪峰SQL教程29.png"
 
@@ -660,9 +660,11 @@ Serializable是最严格的隔离级别,所有事务按照次序依次执行,脏
 *****
 *****
 
-## 附录
+## 第S81章(附录)
 
-### 第1节(XXX)
+### 第01节(XXX)
+
+
 
 
 
@@ -672,10 +674,12 @@ Serializable是最严格的隔离级别,所有事务按照次序依次执行,脏
 *****
 *****
 
+```Python
+
+print('............................END............................')
+print('............................END............................')
+print('............................END............................')
+
 ```
 
-................................END................................
-................................END................................
-................................END................................
 
-```
