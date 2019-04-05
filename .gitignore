@@ -1,4 +1,4 @@
-#Python.gitignore
+# Python.gitignore
 
 
 # Byte-compiled / optimized / DLL files
@@ -118,10 +118,11 @@ dmypy.json
 .pyre/
 
 
-#Python.gitignore
+# Python.gitignore
 
 
-#Windows.gitignore
+
+# Windows.gitignore
 
 
 Thumbs.db
@@ -129,13 +130,14 @@ ehthumbs.db
 Desktop.ini
 
 
-#Windows.gitignore
+# Windows.gitignore
 
 
-#Gongliuxu.gitignore
+
+# Gongliuxu.gitignore
 
 
-#Gongliuxu.gitignore
+# Gongliuxu.gitignore
 
 
 
